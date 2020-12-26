@@ -1,10 +1,14 @@
 import './App.css';
+import { Banner } from './Components/Banner';
+import Navbar from './Components/Navbar';
 import { Row } from './Components/Row';
 import requests from './requests'
 
 function App() {
   return (
     <div className="app">
+      <Navbar />
+      <Banner />
       <Row title="netflex originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
       <Row title="trending now" fetchUrl={requests.fetchTrending} />
       <Row title="top rated" fetchUrl={requests.fetchTopRated} />
